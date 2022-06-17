@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Demo Caja NodeJS Multitask</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/democaja.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h3>Venta de productos</h3>
+      <p><strong>Demo caja Smart</strong> para probar conexión TCP con POS.</p>
+      <div class="row ">
+        <div class="col-md-4">
+          <button type="button" id="cafe" class="btn btn-primary btn-lg">Café 12.50</button><br><br>
+          <button type="button" id="latte" class="btn btn-primary btn-lg">Latte 14.50</button><br><br>
+          <button type="button" id="choco" class="btn btn-primary btn-lg">Chocolate 13.50</button>
+        </div>
+        <div class="col-md-8 " >
+          <div class="row" style="min-height:200px;">
+            <table class="table" id="lista">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio Unit.</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+                
+                <select class="form-control" id="ippos">
+                  <option>192.168.0.13</option>
+                  <option>192.168.0.17</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Total</span>
+                </div>
+                <input disabled type="text" id="total" class="form-control" value="0.00">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <button type="button" id="borrar" class="btn btn-danger btn-block">Borrar</button>
+            </div>
+            <div class="col-md-3">
+              
+            </div>
+            <div class="col-md-3">
+              <button type="button" id="pagar-chip" class="btn btn-warning btn-block">Pagar Chip</button>
+            </div>
+            <div class="col-md-3">
+              <button type="button" id="pagar-ctl" class="btn btn-warning btn-block">Pagar CTL</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button type="button" id="anular" class="btn btn-danger">Anular</button>
+                </span>
+                <input type="text" id="numrecibo" class="form-control" aria-label="Username">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <button type="button" id="cierre" class="btn btn-warning btn-block">Cierre</button>
+            </div>
+            <div class="col-md-3">
+              <button type="button" id="inicializar" class="btn btn-warning btn-block">Inicializar</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="comment">Respuesta</label>
+                <textarea class="form-control" id="respuesta" rows="5" id="comment"></textarea>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+    </div> <!-- /container -->
+
+    <script src="./js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="./js/democaja.js" type="text/javascript"></script>
+
+  </body>
+</html>
