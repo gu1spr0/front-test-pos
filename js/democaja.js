@@ -3,21 +3,21 @@ $(document).ready(function() {
     $("#cafe").click(function() {
         var markup = "<tr><td>Café</td><td>12.50</td><td>1</td><td>12.50</td></tr>";
         $("#lista tbody").append(markup);
-        total += parseFloat("12.50");
+        total += parseFloat("2.50");
         $("#total").val(total.toFixed(2));
     });
 
     $("#latte").click(function() {
         var markup = "<tr><td>Latte</td><td>14.50</td><td>1</td><td>14.50</td></tr>";
         $("#lista tbody").append(markup);
-        total += parseFloat("14.50");
+        total += parseFloat("4.50");
         $("#total").val(total.toFixed(2));
     });
 
     $("#choco").click(function() {
         var markup = "<tr><td>Chocolate</td><td>13.50</td><td>1</td><td>13.50</td></tr>";
         $("#lista tbody").append(markup);
-        total += parseFloat("13.50");
+        total += parseFloat("3.50");
         $("#total").val(total.toFixed(2));
     });
 
@@ -29,8 +29,7 @@ $(document).ready(function() {
     });
 
     $("#pagar-chip").click(function() {
-        var ippos = $("#ippos option:selected").text();
-        var urlb = "http://localhost:3000/chip/" + ippos + "/" + $("#total").val();
+        var urlb = "http://69.55.59.109:9070/pagos/chip/" + $("#total").val();
 
         $.ajax({
             url: urlb,
@@ -56,8 +55,7 @@ $(document).ready(function() {
     });
 
     $("#pagar-ctl").click(function() {
-        var ippos = $("#ippos option:selected").text();
-        var urlb = "http://localhost:3000/ctl/" + ippos + "/" + $("#total").val();
+        var urlb = "http://69.55.59.109:9070/pagos/ctl/" + $("#total").val();
 
         $.ajax({
             url: urlb,
@@ -81,8 +79,7 @@ $(document).ready(function() {
     });
 
     $("#cierre").click(function() {
-        var ippos = $("#ippos option:selected").text();
-        var urlb = "http://localhost:3000/cierre/" + ippos + "/1";
+        var urlb = "http://69.55.59.109:9070/cierre/1";
 
         $.ajax({
             url: urlb,
@@ -106,9 +103,8 @@ $(document).ready(function() {
     });
 
     $("#anular").click(function() {
-        var ippos = $("#ippos option:selected").text();
         var recibo = $("#numrecibo").val();
-        var urlb = "http://localhost:3000/anulacion/" + ippos + "/" + recibo;
+        var urlb = "http://69.55.59.109:9070/anulacion/" + recibo;
 
         if ($("#numrecibo").val()) {
             $.ajax({
@@ -138,7 +134,7 @@ $(document).ready(function() {
 
     $("#inicializar").click(function() {
         var ippos = $("#ippos option:selected").text();
-        var urlb = "http://localhost:3000/inicializar/" + ippos + "/1";
+        var urlb = "http://69.55.59.109:9070/1";
         $.ajax({
             url: urlb,
             timeout: 40000,
