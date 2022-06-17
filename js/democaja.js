@@ -79,7 +79,7 @@ $(document).ready(function() {
     });
 
     $("#cierre").click(function() {
-        var urlb = "http://69.55.59.109:9070/cierre/1";
+        var urlb = "http://69.55.59.109:9070/pagos/close/1";
 
         $.ajax({
             url: urlb,
@@ -104,7 +104,7 @@ $(document).ready(function() {
 
     $("#anular").click(function() {
         var recibo = $("#numrecibo").val();
-        var urlb = "http://69.55.59.109:9070/anulacion/" + recibo;
+        var urlb = "http://69.55.59.109:9070/pagos/cancel/" + recibo;
 
         if ($("#numrecibo").val()) {
             $.ajax({
