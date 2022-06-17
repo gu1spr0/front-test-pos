@@ -1,21 +1,21 @@
 $(document).ready(function() {
     var total = 0.00;
     $("#cafe").click(function() {
-        var markup = "<tr><td>Café</td><td>12.50</td><td>1</td><td>12.50</td></tr>";
+        var markup = "<tr><td>Café</td><td>2.50</td><td>1</td><td>12.50</td></tr>";
         $("#lista tbody").append(markup);
         total += parseFloat("2.50");
         $("#total").val(total.toFixed(2));
     });
 
     $("#latte").click(function() {
-        var markup = "<tr><td>Latte</td><td>14.50</td><td>1</td><td>14.50</td></tr>";
+        var markup = "<tr><td>Latte</td><td>4.50</td><td>1</td><td>14.50</td></tr>";
         $("#lista tbody").append(markup);
         total += parseFloat("4.50");
         $("#total").val(total.toFixed(2));
     });
 
     $("#choco").click(function() {
-        var markup = "<tr><td>Chocolate</td><td>13.50</td><td>1</td><td>13.50</td></tr>";
+        var markup = "<tr><td>Chocolate</td><td>3.50</td><td>1</td><td>13.50</td></tr>";
         $("#lista tbody").append(markup);
         total += parseFloat("3.50");
         $("#total").val(total.toFixed(2));
@@ -134,7 +134,7 @@ $(document).ready(function() {
 
     $("#inicializar").click(function() {
         var ippos = $("#ippos option:selected").text();
-        var urlb = "http://69.55.59.109:9070/1";
+        var urlb = "http://69.55.59.109:9070/pagos/1/init/1";
         $.ajax({
             url: urlb,
             timeout: 40000,
